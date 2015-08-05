@@ -1,5 +1,5 @@
 console.log('Begin...');
-function Animal(name,age,kind,awake) {
+function Animal(name,age,kind) {
   this.name = name;
   this.age = age;
   this.kind = kind;

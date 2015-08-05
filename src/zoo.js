@@ -12,14 +12,14 @@ Zoo.prototype.changeLocation = function(x) {
   return x;
 };
 
-Zoo.prototype.open = function(newStatus) {
+Zoo.prototype.openZoo = function() {
   if (this.status === 'closed') {
     this.status = 'open';
     return this.status;
   }
 };
 
-Zoo.prototype.close = function() {
+Zoo.prototype.closeZoo = function() {
   if (this.status === 'open') {
     this.status = 'closed';
     return this.status;
@@ -34,11 +34,11 @@ Zoo.prototype.isOpen = function() {
   }
 };
 
-Zoo.prototype.addAnimal = function(newAnimal) {
+Zoo.prototype.addAnimal = function(x) {
   if (this.status === 'open') {
-    if (this.animals.indexOf(newAnimal) === -1) {
-      newAnimal = new Animal(w,x,y,z);
-      return newAnimal;
+    if (this.animals.indexOf(x) === -1) {
+      x = new Animal();
+      return this.animals.push(x);
     }
   }
 };
