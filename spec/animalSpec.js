@@ -19,7 +19,7 @@ describe('Animal', function(){
 
   describe('#growUp', function(){
     it('should increment the age by one', function(){
-      expect(animal.growUp()).
+      expect(animal.growUp()).toEqual(28);
     });
   });
 
@@ -31,13 +31,13 @@ describe('Animal', function(){
 
    describe('#wakeUp', function(){
     it('should change state to awake', function(){
-      // add spec
+      expect(animal.wakeUp()).toBe(true);
     });
   });
 
   describe('#sleep', function(){
     it('should initially be sleeping', function(){
-      // add spec
+      expect(animal.sleep()).not.toBeTruthy();
     });
   });
 

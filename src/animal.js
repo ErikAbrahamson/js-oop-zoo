@@ -15,7 +15,7 @@ Animal.prototype.oink = function() {
 };
 
 Animal.prototype.growUp = function() {
-  this.age += 1;
+  return this.age += 1;
 };
 
 Animal.prototype.feed = function() {
@@ -27,12 +27,14 @@ Animal.prototype.feed = function() {
 Animal.prototype.wakeUp = function() {
   if (this.awake === false) {
     this.awake = true;
+    return this.awake;
   }
 };
 
 Animal.prototype.sleep = function() {
   if (this.awake === true) {
     this.awake = false;
+    return this.awake;
   }
 };
 
