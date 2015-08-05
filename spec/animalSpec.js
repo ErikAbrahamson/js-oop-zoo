@@ -1,5 +1,4 @@
 var Animal = require('../src/animal.js');
-
 var animal;
 
 describe('Animal', function(){
@@ -10,7 +9,7 @@ describe('Animal', function(){
 
   describe('#oink', function(){
     it('should oink if it is a pig', function(){
-      expect(animal.oink()).toEqual('oink');
+      expect(animal.oink()).toEqual('Oink!');
     });
     it('should not oink if it is not pig', function(){
       animal.kind = 'lion';
@@ -20,7 +19,7 @@ describe('Animal', function(){
 
   describe('#growUp', function(){
     it('should increment the age by one', function(){
-      // add spec
+      expect(animal.growUp()).
     });
   });
 

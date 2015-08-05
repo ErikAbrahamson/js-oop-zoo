@@ -1,5 +1,4 @@
 console.log('Begin...');
-
 function Animal(name,age,kind,awake) {
   this.name = name;
   this.age = age;
@@ -10,6 +9,8 @@ function Animal(name,age,kind,awake) {
 Animal.prototype.oink = function() {
   if (this.kind === 'pig') {
     return 'Oink!';
+  } else {
+    return 'I\'m not a pig';
   }
 };
 
@@ -25,8 +26,16 @@ Animal.prototype.feed = function() {
 
 Animal.prototype.wakeUp = function() {
   if (this.awake === false) {
-    return true;
+    this.awake = true;
   }
 };
+
+Animal.prototype.sleep = function() {
+  if (this.awake === true) {
+    this.awake = false;
+  }
+};
+
+
 
 
