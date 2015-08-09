@@ -50,11 +50,15 @@ describe('Zoo', function(){
     });
 
     it('should only add instances of animals', function(){
-      // add spec
+      zoo.status = 'open';
+      expect(zoo.addAnimal(pig)).toEqual(1);
     });
 
     it('should not add duplicates', function(){
-      // add spec
+      zoo.status = 'open';
+      zoo.addAnimal(pig);
+      zoo.addAnimal(pig);
+      expect(zoo.animals.length).toBe(1);
     });
   });
 
