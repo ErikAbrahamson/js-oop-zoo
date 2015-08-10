@@ -3,7 +3,7 @@ function Animal(name,age,kind,awake) {
   this.name = name;
   this.age = age;
   this.kind = kind;
-  this.awake = false;
+  this.awake = awake || false;
 }
 
 Animal.prototype.oink = function() {
